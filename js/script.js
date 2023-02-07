@@ -24,9 +24,52 @@ backLight.position.set(100, 0, -100).normalize();
 scene.add(keyLight);
 scene.add(fillLight);
 scene.add(backLight);
+hemiLight = new THREE.HemisphereLight(0xffeeb1, 0x080820, 4);
+scene.add(hemiLight);
 scene.background = new THREE.Color("white");
 
+//---ECHO-DOT---
+    var mtlLoader = new THREE.MTLLoader();
+    mtlLoader.setTexturePath('files/Echo_dot/');
+    mtlLoader.setPath('files/Echo_dot/');
+    mtlLoader.load('ECHO_DOT.mtl', function (materials) {
 
+    materials.preload();
+
+    var objLoader = new THREE.OBJLoader();
+    objLoader.setMaterials(materials);
+    objLoader.setPath('files/Echo_dot/');
+    objLoader.load('ECHO_DOT.obj', function (object) {
+
+        scene.add(object);
+
+    });
+
+});
+
+//---ROOM---
+/*var mtlLoader = new THREE.MTLLoader();
+    mtlLoader.setTexturePath('files/Room/');
+    mtlLoader.setPath('files/Room/');
+    mtlLoader.load('Room1.mtl', function (materials) {
+
+    materials.preload();
+
+    var objLoader = new THREE.OBJLoader();
+    objLoader.setMaterials(materials);
+    objLoader.setPath('files/Room/');
+    objLoader.load('Room1.obj', function (object) {
+
+        scene.add(object);
+
+    });
+
+});*/
+
+
+//---CUBO-RUBIK-3x3x3---
+
+/*
 var mtlLoader = new THREE.MTLLoader();
     mtlLoader.setTexturePath('files/Rubik/');
     mtlLoader.setPath('files/Rubik/');
@@ -44,8 +87,10 @@ var mtlLoader = new THREE.MTLLoader();
 
     });
 
-});
+});*/
 
+
+// ANIMATE
 var animate = function () {
 	requestAnimationFrame( animate );
 	controls.update();

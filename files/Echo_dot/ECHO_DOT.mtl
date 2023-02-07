@@ -10,20 +10,20 @@ illum 7
 
 newmtl Rich Blue Denim
 Ka 1 1 1
-Kd 0.20000000298023 0.20000000298023 0.20000000298023
-illum 15
+Kd 0 0 0
+map_Kd ./tex/algodon.jpg
+illum 7
 
 newmtl LED PRINCIPAL
 Ka 1 1 1
 Kd 1 1 1
-Ke 1 1 1
-Ks 1 1 1
-Ns 50
+map_Kd ./tex/LED-PRINCIPAL.jpg
 illum 7
 
 newmtl BASE_1
 Ka 1 1 1
-Kd 0.15862068533897 0.15862068533897 0.15862068533897
+Kd 1 1 1
+map_Kd ./tex/BASE.jpg
 illum 7
 
 newmtl CONECTORES
@@ -33,11 +33,10 @@ Ks 1 1 1
 Ns 100
 illum 7
 
-newmtl BTN BORDER
+newmtl BTN MUTE
 Ka 1 1 1
-Kd 0.31034481525421 0.31034481525421 0.31034481525421
-Ks 1 1 1
-Ns 50
+Kd 0 0 0
+map_Kd ./tex/BTN-MUTE.jpg
 illum 7
 
 newmtl BTN HOME
@@ -86,13 +85,6 @@ Ka 2.17241382598877 0 0
 Kd 2.5 0 0
 Ke 2.17241382598877 0 0
 Ks 1 0 0
-Ns 50
-illum 7
-
-newmtl BTN MUTE
-Ka 1 1 1
-Kd 0.34999999403954 0.34999999403954 0.34999999403954
-Ks 1 1 1
 Ns 50
 illum 7
 
